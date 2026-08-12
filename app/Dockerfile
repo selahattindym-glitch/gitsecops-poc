@@ -1,12 +1,8 @@
-FROM python:3.9-slim
+FROM nginx:alpine
 
-WORKDIR /app
+# Uygulama dosyalarını Nginx'in varsayılan statik dosya dizinine kopyala
+COPY index.html /usr/share/nginx/html/
+COPY style.css /usr/share/nginx/html/
+COPY script.js /usr/share/nginx/html/
 
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
-COPY main.py .
-
-EXPOSE 8080
-
-CMD ["python", "main.py"]
+EXPOSE 80

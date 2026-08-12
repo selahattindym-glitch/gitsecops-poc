@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitSecOps Bank</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <h2>GSO Bank</h2>
+            </div>
+            <ul class="nav-links">
+                <li class="active"><a href="#">💳 Genel Bakış</a></li>
+                <li><a href="#">💸 Transferler</a></li>
+                <li><a href="#">📊 Yatırımlar</a></li>
+                <li><a href="#">⚙️ Ayarlar</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header>
+                <div class="greeting">
+                    <h1>Hoş Geldin, DevOps 👋</h1>
+                    <p>Finansal durumun bugün harika görünüyor.</p>
+                </div>
+                <div class="profile">
+                    <img src="https://ui-avatars.com/api/?name=Dev+Ops&background=0D8ABC&color=fff" alt="Profile" class="avatar">
+                </div>
+            </header>
+
+            <div class="content-grid">
+                <!-- Balance Card -->
+                <div class="glass-card balance-card">
+                    <h3>Toplam Bakiye</h3>
+                    <h2 class="balance">₺124,500.00</h2>
+                    <div class="card-details">
+                        <span>**** **** **** 4092</span>
+                        <div class="mastercard-logo">
+                            <div class="circle red"></div>
+                            <div class="circle orange"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Transfer -->
+                <div class="glass-card quick-transfer">
+                    <h3>Hızlı Transfer</h3>
+                    <div class="transfer-input-group">
+                        <input type="text" placeholder="IBAN veya İsim" class="neo-input">
+                        <input type="number" placeholder="Tutar (₺)" class="neo-input">
+                        <button class="neo-btn" id="transferBtn">Gönder</button>
+                    </div>
+                </div>
+
+                <!-- Recent Transactions -->
+                <div class="glass-card transactions">
+                    <h3>Son İşlemler</h3>
+                    <ul class="transaction-list">
+                        <li class="transaction-item">
+                            <div class="t-info">
+                                <div class="t-icon bg-purple">🛒</div>
+                                <div>
+                                    <h4>Market Alışverişi</h4>
+                                    <p>Bugün, 14:30</p>
+                                </div>
+                            </div>
+                            <span class="t-amount negative">-₺450.00</span>
+                        </li>
+                        <li class="transaction-item">
+                            <div class="t-info">
+                                <div class="t-icon bg-green">💼</div>
+                                <div>
+                                    <h4>Maaş Ödemesi</h4>
+                                    <p>Dün, 09:00</p>
+                                </div>
+                            </div>
+                            <span class="t-amount positive">+₺45,000.00</span>
+                        </li>
+                        <li class="transaction-item">
+                            <div class="t-info">
+                                <div class="t-icon bg-blue">💻</div>
+                                <div>
+                                    <h4>AWS Faturası</h4>
+                                    <p>10 Ağustos, 18:45</p>
+                                </div>
+                            </div>
+                            <span class="t-amount negative">-₺1,200.00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
